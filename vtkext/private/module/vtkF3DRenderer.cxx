@@ -3503,3 +3503,9 @@ void vtkF3DRenderer::SetConsoleBadgeEnabled(bool enabled)
 {
   this->UIActor->SetConsoleBadgeEnabled(enabled);
 }
+
+//----------------------------------------------------------------------------
+void vtkF3DRenderer::SetRenderRequestCallback(std::function<void()> callback)
+{
+  this->UIActor->SetRenderRequestCallback(std::move(callback));
+}
